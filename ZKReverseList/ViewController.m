@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ReverseList.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    struct Node *head = constructList();
+    printList(head);
+    struct Node *node = reverseList(head);
+    printList(node);
 }
 
 
